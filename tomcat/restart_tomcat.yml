@@ -1,0 +1,4 @@
+---
+- hosts: tomcat
+  roles:
+     - restart_tomcat

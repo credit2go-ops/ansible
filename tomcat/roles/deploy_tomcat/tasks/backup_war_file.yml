@@ -1,0 +1,10 @@
+- name: remove all bak folder files
+  shell: 'rm -rf {{remote_tomcat_backup_path}}*'
+- name: move the old war file
+  shell: 'mv {{remote_tomcat_path}}*.war {{remote_tomcat_backup_path}}'
+- name: move the folder to back folder
+  shell: 'mv {{remote_tomcat_deploy_path}}{{project_name}} {{remote_tomcat_backup_path}}'
+- name: change folder name
+  shell: "ls {{remote_tomcat_backup_path}}*.war | sed 's/.war//g' | xargs mv {{remote_tomcat_backup_path}}{{project_name}}"
+- name: change folder name timesteamp
+  shell: "touch {{remote_tomcat_backup_path}}*"

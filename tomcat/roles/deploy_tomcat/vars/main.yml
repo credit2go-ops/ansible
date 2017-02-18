@@ -1,0 +1,7 @@
+remote_tomcat_path: /var/lib/tomcat6/
+remote_tomcat_backup_path: /var/lib/tomcat6/bak/
+remote_tomcat_deploy_path: /var/lib/tomcat6/webapps/
+project_name: escrow
+local_file_src: file/123.war
+service_name: tomcat6
+belong_user: tomcat

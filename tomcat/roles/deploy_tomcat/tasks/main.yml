@@ -1,0 +1,6 @@
+- include: stop_tomcat.yml
+- include: backup_war_file.yml
+- include: copy_war_file.yml
+- include: deploy_war_file.yml
+- include: ensure_all_files_group_and_onwer.yml
+- include: start_tomcat.yml

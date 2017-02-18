@@ -1,0 +1,4 @@
+- name: start tomcat service 
+  service:
+    name: '{{service_name}}'
+    state: 'started'

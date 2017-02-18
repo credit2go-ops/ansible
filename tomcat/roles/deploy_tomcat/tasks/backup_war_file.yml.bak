@@ -1,0 +1,14 @@
+- name: remove all bak folder files
+  shell: 'rm -rf {{remote_tomcat_backup_path}}*'
+- name: ensure war file
+  stat:
+    path: '{{remote_tomcat_path}}'
+  register: stat_result
+- name: move the old war file
+  copy: 
+    remote_src: 'true'
+    src: '{{remote_tomcat_path}}'
+    dest: '{{backup_dest}}'
+    owner: '{{belong_user}}'
+    group: '{{belong_user}}'
+  when: stat_result.stat.exists == True

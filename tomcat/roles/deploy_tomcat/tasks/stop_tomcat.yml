@@ -1,0 +1,5 @@
+- name: stop tomcat service 
+  service:
+    name: '{{service_name}}'
+    state: 'stopped'
+

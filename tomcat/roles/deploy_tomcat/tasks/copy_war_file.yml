@@ -1,0 +1,7 @@
+- name: Copy war file to tomcat
+  copy: 
+    src: '{{local_file_src}}' 
+    dest: '{{remote_tomcat_path}}'  
+    owner: '{{belong_user}}' 
+    group: '{{belong_user}}' 
+    force: yes

@@ -1,0 +1,2 @@
+- name: Copy war file to tomcat
+  shell: "cp {{remote_tomcat_path}}*.war {{remote_tomcat_deploy_path}}{{project_name}}.war"
