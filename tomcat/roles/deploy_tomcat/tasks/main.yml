@@ -4,3 +4,4 @@
 - include: deploy_war_file.yml
 - include: ensure_all_files_group_and_onwer.yml
 - include: start_tomcat.yml
+- include: check_log_status.yml

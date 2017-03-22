@@ -1,0 +1,4 @@
+---
+- hosts: tomcat
+  roles:
+     - copy_nginx_conf

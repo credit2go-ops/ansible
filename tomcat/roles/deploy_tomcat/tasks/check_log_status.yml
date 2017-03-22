@@ -1,0 +1,4 @@
+- name: check tomcat log
+  script: 'check_log.sh'
+  register: out
+- debug: var=out.stdout_lines

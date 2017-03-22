@@ -1,0 +1,4 @@
+---
+- hosts: tomcat
+  roles:
+     - reload_nginx

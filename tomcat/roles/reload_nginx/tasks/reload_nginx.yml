@@ -1,0 +1,9 @@
+- name: check nginx config
+  shell: "/usr/sbin/nginx -t"
+  register: nginx_check
+
+- name: reload nginx
+  service:
+    name: "nginx"
+    state: "reloaded"
+  when: nginx_check|success

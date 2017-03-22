@@ -1,0 +1,7 @@
+- name: Copy nginx file to remote server
+  copy: 
+    src: '{{local_file_src}}' 
+    dest: '{{remote_nginx_path}}'
+    owner: 'nginx'
+    group: 'nginx'
+    force: yes

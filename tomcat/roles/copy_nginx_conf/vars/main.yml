@@ -1,0 +1,2 @@
+remote_nginx_path: /etc/nginx/
+local_file_src: /opt/tomcat/roles/copy_nginx_conf/template/nginx.conf
